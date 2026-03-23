@@ -1,0 +1,335 @@
+/* =========================
+   CUSTOM PS5 + 4 PADDLES
+   for Gamepad Viewer css=
+   ========================= */
+
+/* main controller shell */
+.controller.custom {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    overflow: visible;
+    background: url() no-repeat center;
+    background-size: contain;
+}
+
+/* hide disconnected internals */
+.custom.disconnected div {
+    display: none;
+}
+
+/* triggers */
+.custom .triggers {
+    width: 640px;
+    height: 86px;
+    position: absolute;
+    left: 280px;
+    top: 24px;
+}
+
+.custom .trigger {
+    width: 116px;
+    height: 100%;
+    background: url(REPLACE_WITH_YOUR_TRIGGER_PNG) no-repeat;
+    background-size: 232px 86px;
+    opacity: 0;
+}
+
+.custom .trigger.left {
+    float: left;
+    background-position: left top;
+}
+
+.custom .trigger.right {
+    float: right;
+    background-position: right top;
+}
+
+/* bumpers */
+.custom .bumpers {
+    position: absolute;
+    width: 760px;
+    height: 44px;
+    left: 220px;
+    top: 98px;
+}
+
+.custom .bumper {
+    width: 220px;
+    height: 44px;
+    background: url(REPLACE_WITH_YOUR_BUMPER_PNG) no-repeat;
+    background-size: 220px 44px;
+    opacity: 0;
+}
+
+.custom .bumper.left {
+    float: left;
+}
+
+.custom .bumper.right {
+    float: right;
+    transform: scaleX(-1);
+}
+
+.custom .bumper.pressed {
+    opacity: 1;
+}
+
+/* touchpad */
+.custom .touchpad {
+    width: 270px;
+    height: 150px;
+    position: absolute;
+    left: 465px;
+    top: 92px;
+    border-radius: 22px;
+}
+
+.custom .touchpad.pressed {
+    background: url(REPLACE_WITH_YOUR_TOUCHPAD_PNG) no-repeat center;
+    background-size: contain;
+}
+
+/* PS / home button */
+.custom .meta {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    left: 564px;
+    top: 248px;
+}
+
+.custom .meta.pressed {
+    background: url(REPLACE_WITH_YOUR_HOME_PNG) no-repeat center;
+    background-size: contain;
+}
+
+/* share / options */
+.custom .arrows {
+    position: absolute;
+    width: 460px;
+    height: 80px;
+    left: 370px;
+    top: 188px;
+}
+
+.custom .back,
+.custom .start {
+    width: 34px;
+    height: 34px;
+    opacity: 0;
+    background: url(REPLACE_WITH_YOUR_MENU_PNG) no-repeat center;
+    background-size: contain;
+}
+
+.custom .back {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.custom .start {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.custom .back.pressed,
+.custom .start.pressed {
+    opacity: 1;
+}
+
+/* face buttons cluster */
+.custom .abxy {
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    top: 235px;
+    left: 790px;
+}
+
+.custom .button {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background: url(REPLACE_WITH_YOUR_FACE_BUTTONS_PNG) no-repeat;
+    background-size: 232px 116px;
+}
+
+.custom .button.pressed {
+    background-position-y: -58px;
+}
+
+.custom .a {
+    left: 63px;
+    top: 126px;
+    background-position-x: 0;
+}
+
+.custom .b {
+    left: 126px;
+    top: 63px;
+    background-position-x: -58px;
+}
+
+.custom .x {
+    left: 0;
+    top: 63px;
+    background-position-x: -116px;
+}
+
+.custom .y {
+    left: 63px;
+    top: 0;
+    background-position-x: -174px;
+}
+
+/* sticks */
+.custom .sticks {
+    position: absolute;
+    width: 410px;
+    height: 115px;
+    top: 378px;
+    left: 395px;
+}
+
+.custom .stick {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url(REPLACE_WITH_YOUR_STICKS_PNG) no-repeat;
+    background-size: 300px 100px;
+}
+
+.custom .stick.left {
+    left: 0;
+    top: 0;
+}
+
+.custom .stick.right {
+    right: 0;
+    top: 0;
+}
+
+.custom .stick.pressed.left {
+    background-position-x: -100px;
+}
+
+.custom .stick.pressed.right {
+    background-position-x: -200px;
+}
+
+/* dpad */
+.custom .dpad {
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    top: 258px;
+    left: 260px;
+}
+
+.custom .face {
+    position: absolute;
+    background: url(REPLACE_WITH_YOUR_DPAD_PNG) no-repeat;
+    background-size: 208px 104px;
+}
+
+.custom .face.up,
+.custom .face.down {
+    width: 36px;
+    height: 52px;
+}
+
+.custom .face.left,
+.custom .face.right {
+    width: 52px;
+    height: 36px;
+}
+
+.custom .face.up {
+    top: 0;
+    left: 48px;
+    background-position: -36px 0;
+}
+
+.custom .face.down {
+    bottom: 0;
+    left: 48px;
+    background-position: 0 0;
+}
+
+.custom .face.left {
+    top: 48px;
+    left: 0;
+    background-position: -104px 0;
+}
+
+.custom .face.right {
+    top: 48px;
+    right: 0;
+    background-position: -52px 0;
+}
+
+.custom .face.pressed {
+    background-position-y: -52px;
+}
+
+/* =========================
+   visible 4-paddle system
+   ========================= */
+
+/* outer paddles */
+.controller.custom::before,
+.controller.custom::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    pointer-events: none;
+    width: 36px;
+    height: 150px;
+    bottom: 110px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 50%, #1c1c1c 100%);
+    border-radius: 18px 18px 22px 22px;
+    clip-path: polygon(28% 0%, 72% 0%, 100% 18%, 88% 100%, 12% 100%, 0% 18%);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.10),
+        0 6px 16px rgba(0,0,0,0.45);
+}
+
+.controller.custom::before {
+    left: 332px;
+    transform: rotate(22deg);
+}
+
+.controller.custom::after {
+    right: 332px;
+    transform: rotate(-22deg);
+}
+
+/* inner paddles */
+.custom .sticks::before,
+.custom .sticks::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    pointer-events: none;
+    width: 30px;
+    height: 132px;
+    bottom: -8px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 50%, #1c1c1c 100%);
+    border-radius: 16px 16px 18px 18px;
+    clip-path: polygon(26% 0%, 74% 0%, 100% 18%, 88% 100%, 12% 100%, 0% 18%);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.10),
+        0 6px 14px rgba(0,0,0,0.45);
+}
+
+.custom .sticks::before {
+    left: 54px;
+    transform: rotate(12deg);
+}
+
+.custom .sticks::after {
+    right: 54px;
+    transform: rotate(-12deg);
+}
